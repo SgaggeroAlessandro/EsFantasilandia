@@ -106,10 +106,17 @@ namespace EsFantasilandia
 
 /*
  * RISPOSTA ALLE DOMANDE GUIDA:
- * 1. 
- * 
- * 
- * 
+ * 1. Ho scelto la classe astratta per la classe delle attrazioni. Serve quando ci sono dei metodi e degli attributi comuni a più classi figlie (Montagne russe, giostre, sala giochi, salto nel vuoto)
+ * Ho scelto la classe concreta per descrivere oggetti reali da istanziare, se fossero astratte non potrei usarle nel main
+ * L'interfaccia l'ho usata per trattare allo stesso modo classi diverse
+ * Se CAttrazioni fosse concreata rischierei che Costo() di default sbagliato o di dimenticare l'override
+ *2. L'ereditarietà l'ho usata tra CAttrazioni e CMontagnaRussa,CGiostre, CSalagiochi e poi tra CMontagnaRussa e CSaltonelVuoto
+ * Dal testo, quando c'erano parole che facevano intendere che una classe derivava da un'altra
+ * 3. Nel calcolo dell'incasso: incasso += a.Costo(v1); (96)
+ * E anche nella manutenzione : Console.WriteLine(f.Descrizione()); (60)
+ * Perché nel calcolo dell'incasso a è di tipo CAttrazioni e poi viene chiamato Costo() della classe concreta
+ * La stessa cosa vale per Descrizione() con f che è IFixable
+ * 4.Perché non sono delle attrazioni, non hanno attributi comuni con le attrazioni, ma hanno solo la parte della riparazione comuni
  * 
  * 
 */
